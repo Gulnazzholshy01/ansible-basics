@@ -1,0 +1,7 @@
+- name: Create a file
+  hosts: localhost
+  tasks:
+    - name: Creating an empty file
+      file: 
+        path: /root/ansible-basics/file_test.yaml
+        state: touch 
