@@ -1,0 +1,11 @@
+- name: Writing lines in a file
+  hosts: localhost
+  tasks:
+    - name: Writing lines
+      blockinfile:
+        path: /tmp/file1.txt
+        block: | 
+          This is line 1
+          This is line 2
+       
+
