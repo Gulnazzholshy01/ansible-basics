@@ -3,6 +3,17 @@
   tasks:
     - name: Writing lines
       lineinfile:
-        path: /tmp/file.txt
-        line: This is line 1
-        line: This is line 2
+        dest: /tmp/file.txt
+        line: '{{ item }}'
+      with_items:
+        - This is line 1
+        - This is line 2
+
+# - name: add lines
+#   lineinfile: 
+#     dest: fruits.txt
+#     line: '{{ item }}'
+#   with_items:
+#     - 'Orange'
+#     - 'Apple'
+#     - 'Banana'
