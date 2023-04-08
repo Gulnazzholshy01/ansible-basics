@@ -2,18 +2,10 @@
   hosts: localhost
   tasks:
     - name: Writing lines
-      lineinfile:
-        dest: /tmp/file.txt
-        line: '{{ item }}'
-      with_items:
-        - This is line 1
-        - This is line 2
+      blockinfile:
+        path: /tmp/file1.txt
+        block: | 
+          This is line 1
+          This is line 2
+       
 
-# - name: add lines
-#   lineinfile: 
-#     dest: fruits.txt
-#     line: '{{ item }}'
-#   with_items:
-#     - 'Orange'
-#     - 'Apple'
-#     - 'Banana'
