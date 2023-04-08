@@ -3,5 +3,5 @@
   tasks:
     - name: Creating an empty file
       file: 
-        path: /root/ansible-basics/file_test.yaml
+        path: /tmp/file.yaml
         state: touch 
