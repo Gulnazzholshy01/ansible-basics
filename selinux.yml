@@ -4,5 +4,8 @@
     - name: changing SElinux to disabled
       replace:
         path: /etc/selinux/config
-        regexp: 'SELINUX=enforcing'
-        replace: 'SELINUX=disabled'
+        regexp: 'SELINUX=disabled'
+        replace: 'SELINUX=enforcing'
+  
+    - name: Reboot the machine
+      shell: reboot
