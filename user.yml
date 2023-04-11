@@ -1,4 +1,4 @@
-- name: Ping localhost
+- name: create users
   hosts: localhost
   tasks: 
     - name: Create user bob
