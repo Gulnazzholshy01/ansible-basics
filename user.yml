@@ -1,0 +1,17 @@
+- name: Ping localhost
+  hosts: localhost
+  tasks: 
+    - name: Create users
+      user: 
+        name: bob
+        uid:  4400
+
+    - name:
+      user:
+        name: anna
+        uid: 4500
+        
+    - name:
+      user:
+        name: amy
+        uid: 4600
