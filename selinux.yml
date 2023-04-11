@@ -1,0 +1,11 @@
+- name: changing SElinux configuration
+  hosts: localhost
+  tasks: 
+    - name: changing SElinux to disabled
+      replace:
+        path: /etc/selinux/config
+        regexp: 'SELINUX=enforcing'
+        replace: 'SELINUX=disabled'
+  
+    - name: Reboot the machine
+      shell: reboot
