@@ -1,26 +1,26 @@
 - name: create config files
-  hosts: localhost
+  hosts: servers
   tasks: 
     - name: Add file 1
       file: 
         path: /root/test_config1
-        state: touch
-        owner: root
-        group: root
-        mode: 0664
+        state: absent
+        # owner: root
+        # group: root
+        # mode: 0664
 
     - name: Add file 2
       file: 
         path: /root/test_config2
-        state: touch
-        owner: root
-        group: root
-        mode: 0664
+        state: absent
+        # owner: root
+        # group: root
+        # mode: 0664
 
     - name: Add file 3
       file: 
         path: /root/test_config3
-        state: touch
-        owner: root
-        group: root
-        mode: 0664
+        state: absent
+        # owner: root
+        # group: root
+        # mode: 0664

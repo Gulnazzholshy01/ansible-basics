@@ -1,7 +1,9 @@
 - name: Create a file
-  hosts: localhost
+  hosts: servers
   tasks:
     - name: Creating an empty file
       file: 
         path: /tmp/file.yaml
-        state: touch 
+        state: absent
+
+    
