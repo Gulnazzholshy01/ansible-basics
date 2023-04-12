@@ -1,0 +1,17 @@
+- name: create users
+  hosts: localhost
+  tasks: 
+    - name: Create user bob
+      user: 
+        name: bob
+        uid:  4400
+
+    - name: Create user anna
+      user:
+        name: anna
+        uid: 4500
+
+    - name: Create user amy
+      user:
+        name: amy
+        uid: 4600
