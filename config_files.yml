@@ -1,4 +1,4 @@
-- name: create users
+- name: create config files
   hosts: localhost
   tasks: 
     - name: Add file 1
