@@ -1,7 +1,0 @@
-- name: check and print OS of host1
-  hosts: host1
-  gather_facts: yes
-  tasks:
-    - name: check OS
-      debug:
-        var: ansible_distribution

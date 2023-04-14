@@ -1,0 +1,18 @@
+ 
+ - name: install, start, enable httpd
+   hosts: ungrouped
+   tasks: 
+
+    - name: Install httpd on CentOS
+      yum:
+        name: httpd
+        state: latest
+      when: ansible_pkg_mgr == "dnf"
+  
+    - name: start, enable httpd
+      ansible.builtin.systemd: 
+        name: httpd
+        state: started
+        enabled: yes
+      when: ansible_service_mgr == "systemd" 
+
