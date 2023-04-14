@@ -1,0 +1,24 @@
+- name: hostname, disk usage, memory usage info
+  hosts: host1
+  tasks:
+    - name: check hostname
+      command: hostnamectl
+      register: myoutput1
+
+
+    - name:  check disk usage
+      command: df -h 
+      register: myoutput2
+
+
+
+    - name: check memory usage
+      command: free -m
+      register: myoutput3
+    - name:  print output
+      debug: 
+        msg: 
+        - "{{myoutput3}}"
+        - "{{myoutput2}}"
+        - "{{myoutput1}}"
+     
